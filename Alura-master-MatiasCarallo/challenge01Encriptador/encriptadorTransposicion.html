@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-widht initial-scale=1.0"/>
+    <title>Encriptador Transposición</title>
+    <link rel="stylesheet" href="./estilos/reset.css"/>
+    <link rel="stylesheet" href="./estilos/styleAlura.css"/>
+    <link rel="shortcut icon" href="imagenes/key.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap"/>
+    <!--Tipografia opcional: Roboto Mono-->
+  </head>
+
+  <body>
+    <header>
+      <div class="contenedor">
+        <a href="https://www.aluracursos.com/" target="_blank">
+          <img src="imagenes/logo_Alura.png" alt="Logo de Alura" />
+        </a>
+        <a class="logo" href="index.html">
+          <img class="home" src="imagenes/home.png" alt="Logo de Alura" />
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="ingreso">
+        <div class="conteiner">
+          <h1 class="titulo-encriptador" id="titulo-transposicion">ENCRIPTADOR TRANSPOSICIÓN</h1>
+        </div>
+        <textarea
+          class="input-texto"
+          cols="40"
+          rows="10"
+          placeholder="Ingrese el texto aquí y luego elige una clave en la barra"
+        ></textarea>
+        <div class="rango">
+          <!--Este rango se utilizará como key-->
+          <input
+            id="rango"
+            type="range"
+            value="10"
+            min="1"
+            max="20"
+            oninput="this.nextElementSibling.value = this.value"
+          />
+          <output>10</output>
+        </div>
+        <button class="btn-enc" onclick="btnEncriptar()">Encriptar</button>
+        <button class="btn-des" onclick="btnDesencriptar()">
+          Desencriptar
+        </button>
+      </section>
+
+      <section class="tablero">
+        <div class="conteiner">
+          <h2 id="titulo-resultado"></h2>
+        </div>
+        <div id="toy" class="conteinerImg">
+          <img src="imagenes/imagen_mensaje.png" alt="Muñeco" />
+          <p class="text1">
+            <strong>Ningún texto mensaje fue encontrado</strong>
+          </p>
+          <p class="text2">
+            Ingresa el texto que deseas encriptar o desencriptar
+          </p>
+        </div>
+        <textarea class="mensaje" id="resultado"></textarea>
+        <button class="btn-copiar" id="btn-copy" onclick="btnCopiar()">
+          Copiar
+        </button>
+      </section>
+    </main>
+
+    <footer>
+      <p class="copyright">&copy Copyright Matias E. Carballo - 2022</p>
+    </footer>
+
+    <script src="scripts/scriptTransposicion.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>

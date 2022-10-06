@@ -1,0 +1,267 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*Header de todas las paginas*/
+header{
+    background-color: #bbb;
+    padding: 20px 0; /*20 inferior y superior 0 laterales*/
+}
+
+.box{
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 130px;
+  }
+
+h1{
+  margin: 0 20px;
+}
+
+nav{
+    position: absolute;
+    top: 100px;
+    right: 0;
+    text-align: right;
+    margin: 20px;
+}
+
+nav li{
+    display: inline-block;
+    margin: 0 0 0 10px; /*arriba derecha abajo izquierda*/
+}
+
+nav a{
+    text-transform: uppercase;
+    color: #000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: #c78c19;
+    text-decoration: underline;
+}
+
+/*Main productos*/
+.main{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.productos {
+
+  width: 940px;
+
+  padding: 5% 0;
+}
+
+.productos li {
+  display: inline-block;
+  text-align: center;
+  width: 31%;
+  vertical-align: top;
+  margin: 0 1%; /*margen externo a cada elemento*/
+  padding: 30px 10px;
+  box-sizing: border-box; /*permite que el padig sea ingresado dentro del tamaño del width*/
+  border: 2px solid #000; /*primero width segundo estilo y tercero color*/
+  border-radius: 10px;
+}
+
+.productos li:hover {
+  border-color: #c78c19;
+}
+
+.productos li:active {
+  border-color: #088c19;
+}
+
+.productos h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.productos li:hover h2 {
+  font-size: 33px;
+}
+
+.producto-descripcion {
+  font-size: 18px;
+}
+
+.producto-precio {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/*Main Pagina de Contacto*/
+
+main {
+  width: 940px;
+  padding: 0 10px;
+}
+
+form {
+  margin: 40px 0;
+}
+
+form label {
+  display: block;
+  font-size: 20px;
+  margin: 0 0 10px;
+}
+
+form label form legend {
+  display: block;
+  font-size: 20px;
+  margin: 0 0 10px;
+}
+
+.input-padron {
+  display: block;
+  margin: 0 0 20px;
+  padding: 10px 25px;
+  width: 50%;
+}
+
+legend{
+    margin: 20px 0;
+}
+
+.checkbox {
+  margin: 20px 0;
+}
+
+/*Para aclarar los pesos de las etiquetas clases e id*/
+/*ID tiene peso de 100*/
+/*Clase 10*/
+/*Etiqueta 1*/
+
+.enviar {
+  width: 40%;
+  margin: 0 50px;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: orange;
+  border: none;
+  border-radius: 5px;
+  transition: 1s all; /*cambia el tiempo en que tarda en realizar el efecto*/
+  cursor: pointer;
+}
+
+.enviar:hover {
+  background-color: darkorange;
+  transform: scale(1.2); /*aumenta el tamaño del elemento*/
+  /*transform: rotate(70deg); /*permite rotar el elemento*/
+  /*si ponemos transforms uno denajo del otro solo tomará el efecto de la ultima, para que surjan ambos efectos deben colocarse uno al lado del otro dentro del mismo transform*/
+}
+
+table {
+  margin: 40px 40px;
+}
+
+thead {
+  background: #555;
+  color: white;
+  font-weight: bold;
+}
+
+td, th {
+  border: 1px solid #000;
+  padding: 8px 15px;
+}
+
+/*Footer para todas las paginas*/
+footer {
+  text-align: center;
+  background-image: url(../img/bg.jpg); /*colocamos una imagen como fondo*/
+  padding: 40px;
+}
+
+.coppyright {
+  color: #fff;
+  font-size: 13px;
+  margin: 20px;
+}
+
+/*Responsive*/
+@media screen and (max-width:3000px){
+  .box,  main{
+    width: auto;
+}
+}
+
+/*Responsive para mobiles menores o iguales a 480px de ancho*/
+@media screen and (max-width:1000px){
+    h1, nav{
+        margin: 20px;
+    }
+
+    .productos li{
+        width: 300px;
+        display: block;
+        margin: 5% auto;
+    }
+}
+
+
+/*Responsive para mobiles menores o iguales a 560px de ancho*/
+@media screen and (max-width: 560px){
+
+    /*Header*/
+    .box{
+        margin: 10px 0;
+    }
+
+
+    h1,nav{
+      text-align: center;
+      position: static;
+      margin: 5% 0;
+    }
+
+    nav a{
+      font-size: 18px;
+    }
+
+    /*Contacto*/
+
+    main{
+      padding: 0 5%;
+    }
+    label{
+        text-align: center;
+    }
+
+    .input-padron{
+        width: 80%;
+        margin: 5% 0;
+    }
+
+    legend{
+        margin: 5% auto;
+    }
+
+    #horario{
+        margin: 0 40%;
+    }
+
+    .enviar{
+        width: 80%;
+        margin: 5% 10%;
+    }
+
+    table{
+        margin: 10% auto;
+    }
+
+}

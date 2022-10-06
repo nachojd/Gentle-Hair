@@ -1,0 +1,242 @@
+/* incorporacion de fuentes para la aplicacion */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100;300;400;500;700;900&display=swap');
+
+:root{
+
+    /* palet color */
+    --ligthblue1: #589cdb;
+    --ligthblue2:#398cda;
+    --ligthblue3: #85C1E9;
+    --ligthblue4:#97cef3;
+    --white:#fafafa;
+    --gray:#F8F9F9;
+    --blue1: #063d70;
+    --blue2: #05589c;
+    --black: #000;
+    --shadow: 0 8px 8px;
+    --color_shadow: #00000033;
+
+    /* family fonts and weight */
+    --family-font: 'Noto Sans Mono', monospace;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--gray);
+    height: 100vh;
+    font-family: var(--family-font);
+}
+
+::-webkit-scrollbar {
+    width: 0.4rem;
+    background: var(--gray);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--ligthblue2);
+    transition: 0.3s;
+}
+
+
+.cabecera {
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: .5rem 0;
+    background-color: var(--ligthblue1);
+    border-radius: 0px 0px 15px 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.cabecera h1 {
+    color: var(--white);
+    font-size: 20px;
+}
+
+.content {
+    width: 100%;
+    height: 80.4vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.primary_section, .second_section{
+    height: 100%;
+    margin-top: 30px;
+}
+
+.card__item {
+    width: 300px;
+    height: 45%;
+    background-color: var(--ligthblue3);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 11px;
+    transition: .3s;
+    overflow: hidden;
+    position: relative;
+}
+
+.card__item:hover {
+    transform: scale(1.02);
+    background-color: var(--ligthblue4);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.item_container {
+    height: 100%;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    text-align: center;
+    position: absolute;
+}
+
+.container_img{
+    width: 100%;
+}
+
+.card__picture{
+     width: 80px;
+    height: 80px;
+}
+
+.card__title{
+font-size: 18px;
+}
+
+.card__paragraph{
+    margin-top: 10PX;
+    font-size: 15px;
+}
+
+.start {
+    position: absolute;
+    top: -500px;
+    left: 0;
+    background-color: var(--blue1);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
+
+.card__item:hover > .start { 
+    top: 0;
+}
+
+.start_info {
+    display: flex;
+    flex-direction: column;
+}
+
+.start_info img {
+    width: 80px;
+    margin: 0 auto;
+}
+
+.start_info a {
+    color: var(--ligthblue1);
+    text-decoration: none;
+    margin-top: 20px;
+    padding: 5px 20px;
+    background-color: var(--gray);
+    font-weight: 500;
+    border-radius: 6px;
+}
+
+/*final de la pagina*/
+
+.contact{
+    display: flex;
+    width: 100%;
+    height: 7vh;
+    flex-wrap: wrap;
+    margin-top: 1.4em;
+
+}
+
+.item__contact{
+    width: 33%;
+    padding: 10px 0;
+    text-align: center;
+    background: linear-gradient(180deg, var(--blue2) 0%, var(--blue1) 100%);
+    box-shadow: 10px 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.item__contact--mid{
+    width: 34%;
+    background: linear-gradient(180deg, var(--ligthblue2) 0%, var(--blue1) 100%);
+}
+
+.item__contact:nth-child(1){
+    border-radius: 15px 0 0 0 ;
+}
+
+.item__contact:nth-child(3){
+    border-radius: 0 15px 0 0 ;
+}
+
+.socialmedia__icon{
+    font-size: 36px;
+    margin-left: auto;
+    display: inline-block;
+    color: var(--black);
+}
+
+.sm-whatsapp:hover{
+    color: transparent;
+    background-image: url("../imagenes/whatsapp.png");
+    background-repeat: no-repeat;
+}
+
+.sm-linkedin:hover{
+    color: #004182;
+    background-color: var(--white);
+    border: none;
+}
+.sm-gitHub:hover{
+    color: var(--white);
+    background-color: var(--black);
+}
+
+/*Responsive para dispositivos menores o iguales a 700px de ancho*/
+@media only screen and (max-width: 700px) {
+    .content{
+        display: inline-block;
+        margin-top: 20px;
+    }
+
+    .primary_section{
+        margin-bottom: 0;
+    }
+
+    .second_section{
+        margin-top: 0;
+    }
+    .card__item {
+        margin:20px auto;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .cabecera{
+        text-align: center;
+    }
+
+    .card__item {
+        width: 280px;
+    }
+}

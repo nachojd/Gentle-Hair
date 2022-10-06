@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Barbería Alura</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="shortcut icon" href="./img/alura.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"/>
+</head>
+<body>
+    
+    <header><!--Cabesera o Nav-->
+        <div class="box">
+            <h1><img src="img/alura2.png" alt="Logo Barbería" class="logo" /></h1>
+
+        <nav>
+           <ul>
+            <li class="header"><a href="index.html">Home</a></li>
+            <li class="header"><a href="productos.html">Productos</a></li>
+            <li class="header"><a href="contacto.html">Contacto</a></li>
+        </ul> 
+        </nav>
+        </div>
+    </header>
+
+    <main><!--Parte principal de la Pagina-->
+       <form action="">
+        <label for="nombre-apellido">Nombre y Apellido</label>
+        <input type="text" id="nombre-apellido" class="input-padron" required> <!--Relacionamos el lavel e input mediante el id-->
+
+        <label for="correo-electronico">Correo Electrónico</label>
+        <input type="email" id="correo-electronico" class="input-padron" required placeholder="email@dominio.com">
+
+        <!-- Utilizamos los input tipo email y tel para una mejor usabilidad mayormente para usuarios de telefonos mobiles -->
+
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" class="input-padron" required placeholder="(XX) XXXX XXXX">
+
+        <label for="mensaje">Mensaje</label>
+        <textarea name="mensaje" id="mensaje" cols="70" rows="10" class="input-padron"></textarea>
+
+        <fieldset> <!--Todos los grupos que aoarecen adentro pertenecen al mismo tema-->
+            <legend>¿Cómo le gustaría que lo contactemos?</legend> <!--Etiqueta de contenido que se utiliza para los titulos como buena practica-->
+        <label for="radio-email">
+            <input type="radio" name="contacto" value="email" id="radio-email">Email
+        </label>
+        
+        <label for="radio-telefono">
+            <input type="radio" name="contacto" value="telefono" id="radio-telefono">Telefono
+        </label>
+        
+        <label for="radio-whatsapp">
+            <input type="radio" name="contacto" value="whatsapp" id="radio-whatsapp" checked>Whatsapp
+        </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>¿En cual horario prefiere ser atendido?</legend>
+            <select id="horario">
+                <option value="">Mañana</option>
+                <option value="">Tarde</option>
+                <option value="">Noche</option>
+            </select>
+        </fieldset>
+        
+        <label class="checkbox">
+            <input type="checkbox" checked>¿Le gustaría recibir novedades de la Barbería Alura?
+        </label>
+        <input type="submit" value="Enviar Formulario" class="enviar">
+       </form>
+
+       <table>
+        <thead>
+            <tr>
+            <th>Día</th> <!--esto por padron centra el contenido-->
+            <th>Horario</th>
+        </tr>
+        </thead>
+        
+        <tr>
+            <td>Lunes</td>
+            <td>08h ~ 20h</td>
+        </tr>
+        <tr>
+            <td>Miercoles</td>
+            <td>08h ~ 20h</td>
+        </tr>
+        <tr>
+            <td>Viernes</td>
+            <td>08h ~ 20h</td>
+        </tr>
+       </table>
+    </main>
+
+    <footer><!--footer de la pagina-->
+        <img src="img/alura-blanco.png" alt="Logo en Blanco" class="logo">
+        <p class="coppyright">&copy Copyright Barbería Alura - 2022</p>
+    </footer>
+</body>
+</html>

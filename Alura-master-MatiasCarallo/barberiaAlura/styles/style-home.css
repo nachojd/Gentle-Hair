@@ -1,0 +1,245 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*Header de todas las paginas*/
+header{
+    background-color: #bbb;
+    padding: 20px 0; /*20 inferior y superior 0 laterales*/
+}
+
+.box{
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 130px;
+  }
+
+nav{
+    position: absolute;
+    top: 100px;
+    right: 0;
+    text-align: right;
+    margin: 20px;
+}
+
+nav li{
+    display: inline-block;
+    margin: 0 0 0 15px; /*arriba derecha abajo izquierda*/
+}
+
+nav a{
+    text-transform: uppercase;
+    color: #000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: #c78c19;
+    text-decoration: underline;
+}
+
+/*Main del home*/
+
+.principal{
+    padding: 3em 2em; /* le da un espadiado interno es decir desde el vorde para adentro*/
+    background: #fefefe;
+    width: 940px;
+    margin: 0 auto;
+} 
+
+.banner{
+    width: 100%;
+}
+
+.titulo-principal{
+    text-align: center;
+    font-size: 2em; /*2 veces el tamaño de fuente padron*/
+    margin: 0 0 1em;
+    clear: left; /*cualquier configuración que venga despues del titulo lo limpia*/
+}
+
+.titulo-principal::first-letter{
+    font-weight: bold;
+}
+
+.utensillos{
+    width: 120px;
+    float: left; /*colocamos la imagen flotante a la izquierda para que el texto lo rodee*/
+    margin:  0 20px 20px 0;
+}
+
+.principal p{/*cada nombre se llama selector*/
+    margin: 0 0 1em;
+}
+
+.principal strong{
+    font-weight: bold;
+}
+
+.principal em{
+    font-style: italic;
+}
+
+#mision{ /*selector de id lleva #*/
+    font-size: 20px;
+}
+
+.mapa{
+    padding: 3em 0;
+    background: linear-gradient(#fefefe,#888); /*permite colocar una graduacion de un color a otro y ademas los grados y % que queremos que use cada color*/
+}
+
+.mapa p{
+    margin: 0 0 2em;
+    text-align: center;
+}
+
+.mapa-contenido{
+    width: 940px;
+    margin: 0 auto;
+}
+
+.diferenciales{
+    background-color: #888;
+    padding: 3em 0;
+}
+
+.contenido-diferenciales{
+    width: 840px;
+    margin: 0 auto;
+}
+
+.lista-diferenciales{
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.items{ /*selector de clase lleva .*/
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.items::before{
+    content: "★";
+}
+
+.items:first-child{
+    font-weight: bold;
+}
+
+.imagen-diferenciales{
+    width: 50%;
+    transition: 400ms;
+    box-shadow: 10px 10px 30px 5px #000; /*horizontal, vertical, difumasión, alcanse de la sombra, color*/
+    /*box-shadow: inset 0 0 30px red; permite introducir un borde interno introduciendo su ubicación 0 0 (centro del elemento) tamaño y color*/
+}
+
+.imagen-diferenciales:hover{
+    opacity: 0.5; /*agregamos una opacidad a la imagen*/
+}
+.video{
+    width: 560px;
+    margin: 3em auto;
+}
+
+/*Footer para todas las paginas*/
+footer{
+    text-align: center;
+    background-image: url(../img/bg.jpg); /*colocamos una imagen como fondo*/
+    padding: 40px;
+}
+
+.coppyright{
+    color: #fff;
+    font-size: 13px;
+    margin: 20px;
+}
+
+/*Responsive para mobiles menores o iguales a 480px de ancho*/
+@media screen and (max-width: 940px){
+    h1, nav{
+        margin: 10px;
+    }
+
+    .principal{
+        padding: 15px;
+    }
+
+    .lista-diferenciales, .imagen-diferenciales, .video{
+        margin: 10px;
+    }
+
+    .box, .principal, .mapa-contenido, .contenido-diferenciales{
+        width: auto;
+    }
+
+}
+
+
+/*Responsive para mobiles menores o iguales a 480px de ancho*/
+@media screen and (max-width: 560px){
+    /*Header*/
+    .box{
+        margin: 10px 0;
+    }
+
+
+    h1,nav{
+      text-align: center;
+      position: static;
+      margin: 5% 0;
+    }
+
+    nav a{
+      font-size: 18px;
+    }
+
+    .lista-diferenciales, .imagen-diferenciales, .video{
+        width: 90%;
+        margin: 10px;
+    }
+}
+/*Seccion de efectos nuevos a tener en cuenta*/
+
+
+/*ordenamos que solo los elementos hijos del main sean modificados*/
+/* 
+main > p{
+    background: red;
+} 
+*/
+
+/*el primer elemento p despues de la imagen*/
+/* 
+img + p{
+    background: yellow;
+} 
+*/
+
+/*Todos los elementos p despues de la inagen*/
+/* 
+img ~ p{
+    background: green;
+} 
+*/
+
+/*aplica la instruccion a todos menos al elegido*/
+/* 
+.principal p:not(#mision){
+    background: #c78c19;
+} 
+*/
+
+/*función para calcular en css*/
+/* 
+.utensillos{
+    width: calc(40% - (26px * 4));
+} 
+*/
