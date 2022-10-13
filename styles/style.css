@@ -15,6 +15,10 @@ header {
     margin: 0 auto;
 }
 
+.logo-banner-footer {
+    width: 120px;
+}
+
 nav {
     position: absolute; 
     top: 110px;
@@ -180,7 +184,7 @@ width: 100%;
 }
 
 .principal{
-    padding: 3em ;
+    padding: 96px 3em 3em 3em ;
     background: #FEFEFE;
     width: 940px;
     margin: 0 auto;
@@ -233,13 +237,18 @@ width: 100%;
 
 .contenido-diferenciales{
     width: 840px;
-    margin: 0 auto;
+    margin: auto ;
 }
 
 .lista-diferenciales{
-    width: 40%;
+    width: 100%;
     display: inline-block;
     vertical-align: top;
+    
+    column-count: 2; /* número de columnas */
+    column-gap: 100px; /* ancho de columnas */
+    column-rule: 0px outset #999999; /* separación de columnas */
+
 }
 
 .items{
