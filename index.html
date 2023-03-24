@@ -1,106 +1,339 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Barberia Gentle Hair</title>
-    <link rel="stylesheet" href="/styles/reset.css" />
-    <link rel="stylesheet" href="/styles/style.css" />
-    <link rel="shortcut icon" href="./imagenes/tijera.png" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header>
-        <div class="caja">
-          <h1>
-            <img class="logo-banner-footer" src="imagenes/logo.png" />
-          </h1>
-          <nav>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="productos.html">Productos</a></li>
-              <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-          </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>{ ID }</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+    <!-- SECCIÓN INICIO -->
+    <section id="inicio">
+        <div class="contenido">
+            <header>
+                <div class="contenido-header">
+                    <h1>{ ID }</h1>
+                    <nav id="nav" class="">
+                        <ul id="links">
+                            <li><a href="#inicio" class="seleccionado" onclick="seleccionar(this)">HOME</a></li>
+                            <li><a href="#sobremi" onclick="seleccionar(this)" >ABOUT</a></li>
+                            <li><a href="#servicios" onclick="seleccionar(this)">SERVICES</a></li>
+                            <li><a href="#portfolio" onclick="seleccionar(this)">PORTFOLIO</a></li>
+                            <li><a href="#contacto" onclick="seleccionar(this)">CONTACT</a></li>
+                        </ul>
+                    </nav>
+
+                    <!-- Iconos del menu responsive -->
+                    <div id="icono-nav" onclick="responsiveMenu()">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+
+                    <!-- Iconos de las redes sociales -->
+                    <!-- <div class="redes">
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                    </div> -->
+                </div>
+            </header>
+            <div class="presentacion">
+                <p class="bienvenida">Welcome</p>
+                <h2><span>Ignacio Dahuc</span><br>Developer</h2>
+                <p class="descripcion">Bienvenido a mi portfolio</p>
+                <a href="#portfolio">Go to Portfolio</a>
+
+            </div>
         </div>
-    </header>
+    </section>
 
-    <img class="banner" src="banner/banner.jpg" />
-
-    <main>
-      <section class="principal">
-        <h2 class="titulo-principal">Sobre nosotros</h2>
-
-        <p>
-          Ubicada en el corazón de la ciudad, la
-          <strong>Barbería Gentle Hair</strong> trae para el mercado lo que hay de
-          mejor para su cabello y barba. Fundada en 2022, la Barbería Gentle Hair ya
-          es destaque en la ciudad y conquista nuevos clientes diariamente.
-        </p>
-
-        <p id="mision">
-          <em
-            >Nuestra misión es:<strong
-              >"Proporcionar autoestima y calidad de vida a nuestros
-              clientes"</strong
-            >.</em
-          >
-        </p>
-
-        <p>
-          Ofrecemos profesionales experimentados que están constantemente
-          observando los cambios y movimiento en el mundo de la moda, para así
-          ofrecer a nuestros clientes las últimas tendencias. El atendimiento
-          posee un padrón de excelencia y agilidad, garantizando calidad y
-          satisfacción de nuestros clientes.
-        </p>
-      </section>
-
-      <section class="mapa">
-        <h3 class="titulo-principal">Nuestra ubicación</h3>
-        <p>Nuestro establecimiento está ubicado en el corazón de la ciudad</p>
-        <div class="mapa-contenido">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3149.492871573661!2d-122.27176938485053!3d37.87215484297246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80857e9ee9a14f4f%3A0x14df7e164cfa0684!2sGentle%20Hair%20Cuts!5e0!3m2!1ses-419!2sar!4v1665692273090!5m2!1ses-419!2sar" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <!-- SECCIÓN SOBRE MÍ -->
+    <section id="sobremi">
+        <div class="contenedor-foto">
+            <img src="img/foto.jpg" alt="">
         </div>
-      </section>
+        <div class="sobremi">
+            <p class="titulo-seccion">About me</p>
+            <h2>Hello, I am <span>Ignacio Dahuc</span></h2>
+            <h3>Full Stack Developer</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam cum magnam exercitationem adipisci officia, </p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa, tenetur rerum quo incidunt,</p>
+            <a href="#">Descargar CV</a>
+        </div>
+    </section>
 
-      <section class="diferenciales">
-        <h3 class="titulo-principal">Diferenciales</h3>
+    <!-- SECCIÓN SERVICIOS -->
+    <!-- <section id="servicios">
 
-        <div class="contenido-diferenciales">
-          <ul class="lista-diferenciales">
-            <li class="items">Atencion personalizada a los clientes</li>
-            <li class="items">Espacio diferenciado</li>
-            <li class="items">Localización</li>
-            <li class="items">Profesionales calificados</li>
-            <li class="items">Puntualidad</li>
-            <li class="items">Limpieza</li>
-          </ul>
+        <h3 class="titulo-seccion">MY SERVICES</h3>
+
+        <div class="fila">
+
+            <div class="servicio">
+                <span class="icono"><i class="fa-solid fa-code"></i></span>
+                <h4>Web Sites Design</h4>
+                <hr>
+                <ul class="servicios-tag">
+                    <li>Web</li>
+                    <li>Graphic</li>
+                    <li>SEO</li>
+                </ul>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum quia recusandae voluptate vero totam assumenda</p>
+            </div>
+
+            <div class="servicio">
+                <span class="icono"><i class="fa-solid fa-code"></i></span>
+                <h4>Web Sites Design</h4>
+                <hr>
+                <ul class="servicios-tag">
+                    <li>Web</li>
+                    <li>Graphic</li>
+                    <li>SEO</li>
+                </ul>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum quia recusandae voluptate vero totam assumenda</p>
+            </div>
+
+            <div class="servicio">
+                <span class="icono"><i class="fa-solid fa-code"></i></span>
+                <h4>Web Sites Design</h4>
+                <hr>
+                <ul class="servicios-tag">
+                    <li>Web</li>
+                    <li>Graphic</li>
+                    <li>SEO</li>
+                </ul>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum quia recusandae voluptate vero totam assumenda</p>
+            </div>
+
         </div>
 
-        <div class="video">
-          <iframe
-            width="100%"
-            height="315"
-            src="https://www.youtube.com/embed/wcVVXUV0YUY"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-      </section>
-    </main>
+        <div class="fila">
 
+            <div class="servicio">
+                <span class="icono"><i class="fa-solid fa-code"></i></span>
+                <h4>Web Sites Design</h4>
+                <hr>
+                <ul class="servicios-tag">
+                    <li>Web</li>
+                    <li>Graphic</li>
+                    <li>SEO</li>
+                </ul>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum quia recusandae voluptate vero totam assumenda</p>
+            </div>
+
+            <div class="servicio">
+                <span class="icono"><i class="fa-solid fa-code"></i></span>
+                <h4>Web Sites Design</h4>
+                <hr>
+                <ul class="servicios-tag">
+                    <li>Web</li>
+                    <li>Graphic</li>
+                    <li>SEO</li>
+                </ul>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum quia recusandae voluptate vero totam assumenda</p>
+            </div>
+
+            <div class="servicio">
+                <span class="icono"><i class="fa-solid fa-code"></i></span>
+                <h4>Web Sites Design</h4>
+                <hr>
+                <ul class="servicios-tag">
+                    <li>Web</li>
+                    <li>Graphic</li>
+                    <li>SEO</li>
+                </ul>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum quia recusandae voluptate vero totam assumenda</p>
+            </div>
+
+        </div>
+
+    </section> -->
+
+    <!-- SECCIÓN HABILIDADES -->
+    <div class="contenedor-skills" id="skills">
+        <h3>SKILLS</h3>
+        <!-- <div class="skill">
+            <div class="info">
+                <p><span class="lista"></span>Html & Css</p>
+                <span class="porcentaje">90%</span>
+            </div>
+            <div class="barra">
+                <div id="html" class="barra-progreso1"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="info">
+                <p><span class="lista"></span>JavaScript</p>
+                <span class="porcentaje">50%</span>
+            </div>
+            <div class="barra">
+                <div id="js" class="barra-progreso2"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="info">
+                <p><span class="lista"></span>SQL Database</p>
+                <span class="porcentaje">80%</span>
+            </div>
+            <div class="barra">
+                <div id="bd" class="barra-progreso3"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="info">
+                <p><span class="lista"></span>PHP</p>
+                <span class="porcentaje">30%</span>
+            </div>
+            <div class="barra">
+                <div id="php" class="barra-progreso4"></div>
+            </div>
+        </div> -->
+
+    </div>
+
+    <!-- SECCIÓN PORTAFOLIO -->
+    <section id="portfolio">
+
+        <h3 class="titulo-seccion">MY PROJECTS</h3>
+
+        <div class="fila">
+
+            <div class="proyecto">
+                <div class="overlay"></div>
+                <a href="/proyectos/gentle-hair/index.html">
+                    <img  src="img/proyecto1.jpg" alt="">
+                    <div class="info">
+                        <h4>Barberia Gentle Hair</h4>
+                        <p>Diseño web</p>
+                    </div>
+                </a>
+                
+            </div>
+
+            <div class="proyecto">
+                <div class="overlay"></div>
+                <img src="img/proyecto1.jpg" alt="">
+                <div class="info">
+                    <h4>Descripción del proyecto</h4>
+                    <p>Diseño web</p>
+                </div>
+            </div>
+
+            <div class="proyecto">
+                <div class="overlay"></div>
+                <img src="img/proyecto1.jpg" alt="">
+                <div class="info">
+                    <h4>Descripción del proyecto</h4>
+                    <p>Diseño web</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="fila">
+            
+            <div class="proyecto">
+                <div class="overlay"></div>
+                <img src="img/proyecto1.jpg" alt="">
+                <div class="info">
+                    <h4>Descripción del proyecto</h4>
+                    <p>Diseño web</p>
+                </div>
+            </div>
+
+            <div class="proyecto">
+                <div class="overlay"></div>
+                <img src="img/proyecto1.jpg" alt="">
+                <div class="info">
+                    <h4>Descripción del proyecto</h4>
+                    <p>Diseño web</p>
+                </div>
+            </div>
+
+            <div class="proyecto">
+                <div class="overlay"></div>
+                <img src="img/proyecto1.jpg" alt="">
+                <div class="info">
+                    <h4>Descripción del proyecto</h4>
+                    <p>Diseño web</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="fila">
+            
+            <div class="proyecto">
+                <div class="overlay"></div>
+                <img src="img/proyecto1.jpg" alt="">
+                <div class="info">
+                    <h4>Descripción del proyecto</h4>
+                    <p>Diseño web</p>
+                </div>
+            </div>
+
+            <div class="proyecto">
+                <div class="overlay"></div>
+                <img src="img/proyecto1.jpg" alt="">
+                <div class="info">
+                    <h4>Descripción del proyecto</h4>
+                    <p>Diseño web</p>
+                </div>
+            </div>
+
+            <div class="proyecto">
+                <div class="overlay"></div>
+                <img src="img/proyecto1.jpg" alt="">
+                <div class="info">
+                    <h4>Descripción del proyecto</h4>
+                    <p>Diseño web</p>
+                </div>
+            </div>
+
+        </div>
+
+        
+    </section>
+
+
+    <!-- SECCIÓN CONTACTO -->
+    <section id="contacto">
+        <h3 class="titulo-seccion">Contact me</h3>
+        <div class="contenedor-form">
+            <form action="">
+                <div class="fila mitad">
+                    <input type="text" placeholder="Name" class="input-mitad">
+                    <input type="text" placeholder="E-Mail" class="input-mitad">
+                </div>
+                <div class="fila">
+                    <input type="text" placeholder="Tema.." class="input-full">
+                </div>
+                <div class="fila">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Your Message..." class="input-full"></textarea>
+                </div>
+                <input type="submit" value="Send Message" class="btn-enviar">
+            </form>
+        </div>
+    </section>
+
+    <!-- SECCIÓN FOOTER -->
     <footer>
-      <img class= "logo-banner-footer" src="/imagenes/logo-blanco.png" />
-      <p class="copyright">&copy Copyright Barberia Gentle Hair - 2022</p>
+        <p>All Rights Reserved - 2023</p>
+        <!-- <div class="redes">
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+        </div> -->
     </footer>
-  </body>
+
+    <script src="/script.js"></script>
+
+</body>
+
 </html>
